@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <filter>
+        <filter-name>Filtro</filter-name>
+        <filter-class>paolo.aliprandi.filter.Filtro</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>Filtro</filter-name>
+        <url-pattern>/AggiungiMessaggioServlet</url-pattern>
+        <url-pattern>/CreaStanzaServlet</url-pattern>
+        <url-pattern>/MostraStanzaServlet</url-pattern>
+        <url-pattern>/mostraStanza.jsp</url-pattern>
+        <url-pattern>/home.jsp</url-pattern>
+    </filter-mapping>
+    
+    
+    <servlet>
+        <servlet-name>ValidateServlet</servlet-name>
+        <servlet-class>paolo.aliprandi.servlet.ValidateServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>paolo.aliprandi.servlet.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CreaStanzaServlet</servlet-name>
+        <servlet-class>paolo.aliprandi.servlet.CreaStanzaServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MostraStanzaServlet</servlet-name>
+        <servlet-class>paolo.aliprandi.servlet.MostraStanzaServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AggiungiMessaggioServlet</servlet-name>
+        <servlet-class>paolo.aliprandi.servlet.AggiungiMessaggioServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ValidateServlet</servlet-name>
+        <url-pattern>/ValidateServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreaStanzaServlet</servlet-name>
+        <url-pattern>/CreaStanzaServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MostraStanzaServlet</servlet-name>
+        <url-pattern>/MostraStanzaServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AggiungiMessaggioServlet</servlet-name>
+        <url-pattern>/AggiungiMessaggioServlet</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
